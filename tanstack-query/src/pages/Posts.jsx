@@ -33,13 +33,17 @@ const Posts = () => {
   return (
     <div>
         <AddPost/>
+        <div className='flex flex-col items-center justify-center mt-[20px]'>
         {posts.map((post)=>(
-          <div key={post.id}>
-            <h3 onClick={()=>navigate(`/post/${post.id}`)}>{post.title}</h3>
-            <button onClick={()=>navigate(`/post/${post.id}/edit`)}>Edit</button>
-            <button onClick={()=> handleDelete(post.id)}>Delete</button>
+          <div key={post.id} className='bg-slate-300 mb-4 w-[500px] h-[80px] flex items-center justify-between px-2 rounded-lg'>
+            <h3 onClick={()=>navigate(`/post/${post.id}`)} className='font-bold text-3xl uppercase cursor-pointer'>{post.title}</h3>
+            <div className=''>
+            <button onClick={()=>navigate(`/post/${post.id}/edit`)} className='w-[80px] h-[40px]  bg-black text-white mr-3 rounded-md'>Edit</button>
+            <button onClick={()=> handleDelete(post.id)} className='w-[80px] h-[40px] bg-red-400 text-black rounded-md'>Delete</button>
+            </div>
           </div>
         ))}
+        </div>
     </div>
   )
 }

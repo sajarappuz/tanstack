@@ -24,8 +24,8 @@ const AddPost = () => {
   }
 
   return (
-    <div>
-        <h2>Add New Post</h2>
+    <div className='mt-[40px]'>
+        <h2 className='text-center text-3xl font-mono'>Add New Post</h2>
         <PostForm onSubmit={handlePost} initialValue={{}}/>
     </div>
   )

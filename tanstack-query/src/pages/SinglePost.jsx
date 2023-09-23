@@ -24,10 +24,10 @@ const SinglePost = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => navigate('/')}>Back to post page</button>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+    <div className='flex flex-col items-center md:mx-20 mt-[150px]'>
+      <button onClick={() => navigate('/')} className='w-[250px] h-[80px] bg-black text-white text-2xl px-3 rounded-lg '>Back to post page</button>
+      <h1 className='mt-10 text-3xl font-bold uppercase'>{post.title}</h1>
+      <p className='mt-10 text-2xl font-mono'>{post.body}</p>
     </div>
   );
 };

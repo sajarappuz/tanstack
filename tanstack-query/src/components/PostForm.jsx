@@ -25,26 +25,29 @@ const PostForm = ({ onSubmit, initialValue }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Title</label>
+    <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 mt-10">
+      <div className="flex flex-col">
+        <label className="font-bold uppercase">Title</label>
         <input
           onChange={handleChangeInput}
           type="text"
           name="title"
+          
           value={post.title}
+          className="bg-slate-200 h-[30px] w-[250px] rounded-md"
         />
       </div>
-      <div>
-        <label>Body</label>
+      <div className="flex flex-col">
+        <label className="font-bold uppercase">Body</label>
         <input
           onChange={handleChangeInput}
           type="text"
           name="body"
           value={post.body}
+          className="bg-slate-200 h-[60px] w-[250px] rounded-md"
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className="bg-black text-white w-[200px] px-3 h-[40px] rounded-lg">Submit</button>
     </form>
   );
 };

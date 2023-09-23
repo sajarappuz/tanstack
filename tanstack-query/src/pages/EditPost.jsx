@@ -40,7 +40,7 @@ const EditPost = () => {
 
 
   return (
-    <div>
+    <div className='mt-[200px]'>
         <PostForm initialValue={post} onSubmit={handleEdit}/>
     </div>
   )
