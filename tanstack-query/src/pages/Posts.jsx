@@ -24,7 +24,7 @@ const Posts = () => {
         {posts.map((post)=>(
           <div key={post.id}>
             <h3 onClick={()=>navigate(`/post/${post.id}`)}>{post.title}</h3>
-            <button>Edit</button>
+            <button onClick={()=>navigate(`/post/${post.id}/edit`)}>Edit</button>
             <button>Delete</button>
           </div>
         ))}
