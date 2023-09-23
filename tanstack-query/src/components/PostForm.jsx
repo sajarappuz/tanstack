@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const PostForm = ({ onSubmit, initialValue = {} }) => {
+const PostForm = ({ onSubmit, initialValue }) => {
   const [post, setPost] = useState({
     title: initialValue.title || "",
     body: initialValue.body || ""
