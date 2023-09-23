@@ -31,9 +31,11 @@ const Posts = () => {
     console.log(posts);
 
   return (
-    <div>
+    <div className='flex'>
+      <div className='flex-1 mt-[100px]'>
         <AddPost/>
-        <div className='flex flex-col items-center justify-center mt-[20px]'>
+        </div>
+        <div className='flex flex-1 flex-col items-center justify-center mt-[20px] ml-[-70px]'>
         {posts.map((post)=>(
           <div key={post.id} className='bg-slate-300 mb-4 w-[500px] h-[80px] flex items-center justify-between px-2 rounded-lg'>
             <h3 onClick={()=>navigate(`/post/${post.id}`)} className='font-bold text-3xl uppercase cursor-pointer'>{post.title}</h3>
